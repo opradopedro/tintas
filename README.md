@@ -9,6 +9,6 @@ Site estático (HTML + CSS + JS puro, sem build). Basta abrir `index.html` ou pu
 - `assets/img/`: logo (`logo.png`, `logo-light.png`, `logo-badge.png`, `favicon.png`)
 
 ## Ajustes rápidos
-- **WhatsApp**: em `assets/js/main.js`, preencha `CONFIG.whatsapp` (ex.: `"5511999999999"`).
-- **Fotos reais no Ateliê**: salve em `assets/img/galeria/` e preencha `data-photo` em cada `<figure class="frame">` do `index.html`. Sem foto, o quadro mostra uma pintura generativa.
+- **WhatsApp**: número em `CONFIG.whatsapp` (`assets/js/main.js`). Todo link com a classe `js-whats` abre o WhatsApp com a mensagem do `data-msg`.
+- **Fotos da loja**: ficam em `assets/img/loja/`. Para trocar, substitua o arquivo ou mude o `data-photo` da `<figure class="frame">` no `index.html`. Sem foto, o quadro mostra uma pintura generativa.
 - **Cores do simulador**: objeto `MOODS` em `assets/js/main.js`.

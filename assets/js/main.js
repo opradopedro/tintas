@@ -4,9 +4,8 @@
 (() => {
   "use strict";
 
-  // Número de WhatsApp (somente dígitos, com DDI e DDD, ex.: "5511999999999").
-  // Vazio = o botão "Conversar agora" liga para a loja.
-  const CONFIG = { whatsapp: "", phone: "+551127311070" };
+  // Número de WhatsApp (somente dígitos, com DDI e DDD).
+  const CONFIG = { whatsapp: "5511977272118" };
 
   const reduceMotion = matchMedia("(prefers-reduced-motion: reduce)").matches;
   const finePointer = matchMedia("(pointer: fine)").matches;
@@ -60,14 +59,11 @@
   $("#year").textContent = new Date().getFullYear();
 
   /* ---------- WhatsApp ---------- */
-  const whats = $("#whatsBtn");
-  if (CONFIG.whatsapp) {
-    const msg = encodeURIComponent("Olá, Tintas RC! Gostaria de um orçamento.");
-    whats.href = `https://wa.me/${CONFIG.whatsapp}?text=${msg}`;
-  } else {
-    whats.href = `tel:${CONFIG.phone}`;
-    whats.removeAttribute("target");
-  }
+  $$(".js-whats").forEach((a) => {
+    const msg = encodeURIComponent(a.dataset.msg || "Olá, Tintas RC!");
+    a.href = `https://wa.me/${CONFIG.whatsapp}?text=${msg}`;
+    a.target = "_blank"; a.rel = "noopener";
+  });
 
   /* ---------- nav ---------- */
   const nav = $("#nav"), toggle = $("#toggle");
@@ -106,7 +102,7 @@
     $$("[data-count]", e.target).forEach(countUp);
     io.unobserve(e.target);
   }), { threshold: .15, rootMargin: "0px 0px -8% 0px" });
-  $$(".reveal").forEach((el) => io.observe(el));
+  $$(".reveal, .paint-in").forEach((el) => io.observe(el));
 
   /* ---------- manifesto: palavras acendem com o scroll ---------- */
   const split = $(".split");
