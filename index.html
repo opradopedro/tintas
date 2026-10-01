@@ -3,108 +3,184 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Tintas RC — Ateliê da Cor | Zona Leste &amp; ABC</title>
-  <meta name="description" content="Tintas RC: mais de 30 anos de experiência em tintas imobiliárias, industriais, automotivas e complementos para pintura e acabamento. Lojas na Zona Leste de SP e em Santo André.">
-  <meta name="theme-color" content="#f6f1e8">
-  <meta property="og:title" content="Tintas RC — Ateliê da Cor">
-  <meta property="og:description" content="Mais de 30 anos dando cor aos sonhos da Zona Leste e do ABC.">
+  <title>Tintas RC | Loja de Tintas na Zona Leste e no ABC</title>
+  <meta name="description" content="Tintas RC: mais de 30 anos de experiência em tintas imobiliárias, industriais, texturas, vernizes, impermeabilizantes e acessórios. Multimarcas, cor feita na hora e entrega. Lojas na Zona Leste de SP e em Santo André.">
+  <meta name="theme-color" content="#f4efe6">
+  <meta property="og:title" content="Tintas RC | Loja de Tintas">
+  <meta property="og:description" content="Mais de 30 anos dando cor aos projetos da Zona Leste e do ABC.">
   <meta property="og:image" content="assets/img/logo-badge.png">
   <link rel="icon" href="assets/img/favicon.png">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,600;1,9..144,300;1,9..144,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="preload" href="assets/fonts/bricolage-grotesque.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
-  <!-- grão de papel sobre tudo -->
+  <!-- ===== Ilustrações reutilizáveis (rolo, lata, pincel, respingo) ===== -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+    <defs>
+      <!-- rolo em pé: cilindro de y=10 a y=160 (150 unidades) -->
+      <symbol id="i-roller" viewBox="0 0 120 240">
+        <path d="M32 160 V176 Q32 186 42 186 H84 V202" fill="none" stroke="#6b6f7c" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
+        <rect x="70" y="198" width="28" height="42" rx="11" fill="#1c1d24"/>
+        <rect x="74" y="204" width="6" height="30" rx="3" fill="#fff" opacity=".18"/>
+        <rect x="8" y="10" width="48" height="150" rx="17" fill="var(--paint, #26408b)" stroke="#1c1d24" stroke-width="4"/>
+        <path d="M18 24 V146 M30 18 V152 M44 22 V148" stroke="#fff" stroke-width="3" stroke-linecap="round" opacity=".16"/>
+        <path d="M14 40 q8 3 0 8 M48 70 q-8 3 0 8 M16 110 q8 3 0 8" stroke="#1c1d24" stroke-width="2" fill="none" opacity=".25"/>
+      </symbol>
+
+      <!-- rolo deitado (decoração) -->
+      <symbol id="i-roller-flat" viewBox="0 0 260 120">
+        <rect x="6" y="14" width="150" height="50" rx="18" fill="var(--paint, #57a752)" stroke="#1c1d24" stroke-width="4"/>
+        <path d="M20 26 H142 M16 40 H146 M20 54 H142" stroke="#fff" stroke-width="3" stroke-linecap="round" opacity=".18"/>
+        <path d="M156 39 H176 Q186 39 186 49 V78 L206 92" fill="none" stroke="#6b6f7c" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
+        <rect x="196" y="84" width="60" height="26" rx="11" transform="rotate(32 226 97)" fill="#1c1d24"/>
+      </symbol>
+
+      <!-- lata aberta com tinta escorrendo -->
+      <symbol id="i-can" viewBox="0 0 220 240">
+        <path d="M24 66 Q110 -14 196 66" fill="none" stroke="#1c1d24" stroke-width="5" stroke-linecap="round"/>
+        <path d="M30 70 V206 Q30 228 110 228 Q190 228 190 206 V70" fill="#e8e4dc" stroke="#1c1d24" stroke-width="5"/>
+        <path d="M30 104 H190 V176 H30 Z" fill="var(--label, #26408b)"/>
+        <path d="M30 104 Q110 116 190 104" fill="none" stroke="#1c1d24" stroke-width="3" opacity=".25"/>
+        <text x="110" y="138" text-anchor="middle" font-family="Bricolage Grotesque, sans-serif" font-weight="800" font-size="22" fill="#f4efe6">tintas</text>
+        <text x="110" y="166" text-anchor="middle" font-family="Bricolage Grotesque, sans-serif" font-weight="800" font-size="32" fill="#57a752">RC</text>
+        <ellipse cx="110" cy="70" rx="80" ry="20" fill="#cfc9bd" stroke="#1c1d24" stroke-width="5"/>
+        <ellipse cx="110" cy="72" rx="66" ry="13" fill="var(--paint, #57a752)"/>
+        <path d="M44 74 Q46 96 50 100 Q54 104 56 96 Q58 84 62 80 Q66 120 72 122 Q78 124 78 110 V80" fill="var(--paint, #57a752)"/>
+        <path d="M150 80 Q152 100 158 102 Q164 104 164 92 V78" fill="var(--paint, #57a752)"/>
+      </symbol>
+
+      <!-- pincel -->
+      <symbol id="i-brush" viewBox="0 0 70 260">
+        <path d="M27 6 Q35 0 43 6 L46 120 Q35 128 24 120 Z" fill="#c9915f" stroke="#1c1d24" stroke-width="4"/>
+        <circle cx="35" cy="22" r="5" fill="#f4efe6" stroke="#1c1d24" stroke-width="3"/>
+        <rect x="18" y="118" width="34" height="40" rx="4" fill="#b9bcc4" stroke="#1c1d24" stroke-width="4"/>
+        <path d="M18 132 H52 M18 144 H52" stroke="#1c1d24" stroke-width="2" opacity=".35"/>
+        <path d="M14 158 H56 L60 222 Q48 238 35 232 Q22 240 10 222 Z" fill="#e9dcc2" stroke="#1c1d24" stroke-width="4"/>
+        <path d="M11 196 Q35 186 59 196 L60 222 Q48 238 35 232 Q22 240 10 222 Z" fill="var(--paint, #c9806a)"/>
+        <path d="M24 230 Q25 248 29 250 Q33 252 33 240" fill="var(--paint, #c9806a)"/>
+      </symbol>
+
+      <!-- respingo -->
+      <symbol id="i-splat" viewBox="0 0 200 200">
+        <path fill="currentColor" d="M100 38c12 0 14 22 26 24s22-18 32-10-4 26 4 36 30 4 30 18-24 10-28 22 14 26 4 34-24-10-36-4-8 32-26 32-14-26-26-30-28 14-36 4 12-24 4-34-30-6-30-20 24-10 26-22-16-24-6-32 24 8 34 2S88 38 100 38z"/>
+        <circle cx="30" cy="40" r="7" fill="currentColor"/><circle cx="172" cy="30" r="5" fill="currentColor"/>
+        <circle cx="182" cy="160" r="8" fill="currentColor"/><circle cx="20" cy="170" r="5" fill="currentColor"/>
+        <circle cx="110" cy="190" r="4" fill="currentColor"/>
+      </symbol>
+
+      <!-- seta desenhada à mão -->
+      <symbol id="i-arrow" viewBox="0 0 120 80">
+        <path d="M6 10 C40 4 80 18 98 58" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round"/>
+        <path d="M84 52 L99 62 L104 44" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>
+      </symbol>
+    </defs>
+  </svg>
+
   <div class="grain" aria-hidden="true"></div>
   <canvas id="trail" aria-hidden="true"></canvas>
 
-  <!-- loader: uma gota que se espalha -->
+  <!-- loader -->
   <div class="loader" aria-hidden="true">
-    <div class="loader__drop"></div>
     <img src="assets/img/logo.png" alt="" class="loader__logo">
+    <div class="loader__stroke"><span></span><svg class="loader__roller" viewBox="0 0 120 240"><use href="#i-roller"/></svg></div>
+  </div>
+
+  <!-- transição do menu: rolo passando pela tela -->
+  <div class="wipe" aria-hidden="true">
+    <div class="wipe__paint"></div>
+    <svg class="wipe__tool" viewBox="0 0 120 240" preserveAspectRatio="none"><use href="#i-roller"/></svg>
   </div>
 
   <header class="nav" id="nav">
-    <a href="#topo" class="nav__brand" aria-label="Tintas RC — início">
+    <a href="#topo" class="nav__brand" aria-label="Tintas RC, início">
       <img src="assets/img/logo.png" alt="Tintas RC" width="110" height="75">
     </a>
     <nav class="nav__links" id="menu" aria-label="Principal">
-      <a href="#manifesto">Manifesto</a>
-      <a href="#paleta">Paleta</a>
+      <a href="#sobre">A RC</a>
+      <a href="#paleta">Cores</a>
       <a href="#produtos">Produtos</a>
-      <a href="#atelie">A loja</a>
+      <a href="#loja">A loja</a>
+      <a href="#recicladas">Recicladas</a>
       <a href="#contato">Contato</a>
     </nav>
-    <a href="https://wa.me/5511977272118" target="_blank" rel="noopener" class="btn btn--ghost nav__cta js-whats" data-msg="Olá, Tintas RC! Gostaria de um orçamento.">WhatsApp</a>
+    <a href="https://wa.me/5511977272118" class="btn btn--small nav__cta js-whats" data-msg="Olá, Tintas RC! Gostaria de um orçamento.">WhatsApp</a>
     <button class="nav__toggle" id="toggle" aria-label="Abrir menu" aria-expanded="false" aria-controls="menu">
       <span></span><span></span>
     </button>
   </header>
 
   <main id="topo">
-    <!-- HERO -->
-    <section class="hero">
-      <canvas id="fluid" class="hero__canvas" aria-hidden="true"></canvas>
-      <div class="hero__inner">
-        <p class="eyebrow reveal">Mais de 30 anos de experiência em tintas</p>
+    <!-- ================= HERO ================= -->
+    <section class="hero" data-bg="#f4efe6" style="background-color:#f4efe6">
+      <div class="hero__text">
+        <p class="tag reveal">loja de tintas há mais de 30 anos</p>
         <h1 class="hero__title">
-          <span class="line"><span>A cor é</span></span>
-          <span class="line"><span><em>a primeira</em></span></span>
-          <span class="line"><span>pincelada</span></span>
-          <span class="line"><span>do seu <em class="ink">sonho.</em></span></span>
+          <span class="line"><span>Toda parede</span></span>
+          <span class="line"><span>começa com</span></span>
+          <span class="line"><span>uma <span class="swipe swipe--hero" style="--c:#ffd98a">boa cor.</span></span></span>
         </h1>
-        <p class="hero__lead reveal">Tintas, texturas, vernizes e acabamentos das melhores marcas, com atendimento de quem trata cada parede como uma tela em branco.</p>
+        <p class="hero__lead reveal">Tintas, texturas, vernizes e tudo para pintura, das marcas que você conhece. Cor feita na hora, gente que entende do assunto e entrega na sua obra.</p>
         <div class="hero__actions reveal">
-          <a href="#paleta" class="btn btn--solid">Explorar cores</a>
-          <a href="https://wa.me/5511977272118" target="_blank" rel="noopener" class="btn btn--link js-whats" data-msg="Olá, Tintas RC! Gostaria de um orçamento.">Orçamento pelo WhatsApp <span aria-hidden="true">→</span></a>
+          <a href="https://wa.me/5511977272118" class="btn js-whats" data-msg="Olá, Tintas RC! Gostaria de um orçamento.">Pedir orçamento</a>
+          <a href="#paleta" class="btn btn--ghost">Brincar com as cores</a>
         </div>
       </div>
-      <div class="hero__scroll" aria-hidden="true"><span>role</span><i></i></div>
-      <svg class="hero__brush" viewBox="0 0 1440 120" preserveAspectRatio="none" aria-hidden="true">
-        <path d="M0,60 C120,20 240,100 380,70 C520,40 600,90 760,80 C920,70 1020,20 1180,50 C1300,72 1380,40 1440,55 L1440,120 L0,120 Z"/>
-      </svg>
+
+      <div class="hero__art" aria-hidden="true">
+        <svg class="hero__splat hero__splat--a" viewBox="0 0 200 200"><use href="#i-splat"/></svg>
+        <svg class="hero__splat hero__splat--b" viewBox="0 0 200 200"><use href="#i-splat"/></svg>
+        <div class="hero__stack">
+          <svg class="hero__can hero__can--back" style="--paint:#c9806a;--label:#1c1d24" viewBox="0 0 220 240"><use href="#i-can"/></svg>
+          <svg class="hero__can" style="--paint:#57a752;--label:#26408b" viewBox="0 0 220 240"><use href="#i-can"/></svg>
+          <svg class="hero__brush" style="--paint:#57a752" viewBox="0 0 70 260"><use href="#i-brush"/></svg>
+        </div>
+        <p class="note hero__note">cor feita<br>na hora!<svg viewBox="0 0 120 80"><use href="#i-arrow"/></svg></p>
+      </div>
+
     </section>
 
-    <!-- MARQUEE -->
-    <div class="marquee" aria-hidden="true">
-      <div class="marquee__track">
-        <span>Tintas imobiliárias</span><b>✦</b><span>Tintas industriais</span><b>✦</b><span>Texturas</span><b>✦</b><span>Vernizes</span><b>✦</b><span>Impermeabilizantes</span><b>✦</b><span>Tintas recicladas</span><b>✦</b><span>Complementos</span><b>✦</b><span>Cor sob medida</span><b>✦</b>
-        <span>Tintas imobiliárias</span><b>✦</b><span>Tintas industriais</span><b>✦</b><span>Texturas</span><b>✦</b><span>Vernizes</span><b>✦</b><span>Impermeabilizantes</span><b>✦</b><span>Tintas recicladas</span><b>✦</b><span>Complementos</span><b>✦</b><span>Cor sob medida</span><b>✦</b>
+    <!-- faixa de categorias -->
+    <div class="stripe" aria-hidden="true">
+      <svg class="stripe__roller" style="--paint:#26408b" viewBox="0 0 120 240"><use href="#i-roller"/></svg>
+      <div class="stripe__track">
+        <span>Tintas</span><i></i><span>Texturas</span><i></i><span>Vernizes</span><i></i><span>Impermeabilizantes</span><i></i><span>Industriais</span><i></i><span>Acessórios</span><i></i><span>Tintas recicladas</span><i></i>
+        <span>Tintas</span><i></i><span>Texturas</span><i></i><span>Vernizes</span><i></i><span>Impermeabilizantes</span><i></i><span>Industriais</span><i></i><span>Acessórios</span><i></i><span>Tintas recicladas</span><i></i>
       </div>
     </div>
 
-    <!-- MANIFESTO -->
-    <section class="manifesto section" id="manifesto">
-      <div class="manifesto__num reveal" aria-hidden="true">01</div>
-      <div class="manifesto__body">
-        <p class="eyebrow reveal">Manifesto</p>
-        <p class="manifesto__text split">
-          Acreditamos que pintar é um gesto delicado. É escolher a luz que vai acordar com você, o tom que vai abraçar a sua família, a textura que vai guardar as suas memórias. Há mais de três décadas, a Tintas RC une maestria no atendimento, variedade de marcas e técnica de tingimento para que cada lata aberta seja o começo de uma obra.
-        </p>
-        <div class="stats">
-          <div class="stat reveal"><strong data-count="30">0</strong><span>+ anos de<br>experiência</span></div>
-          <div class="stat reveal"><strong data-count="6">0</strong><span>dias por semana<br>de portas abertas</span></div>
-          <div class="stat reveal"><strong data-count="100">0</strong><span>% de cuidado<br>no atendimento</span></div>
+    <!-- ================= SOBRE ================= -->
+    <section class="sobre section" id="sobre" data-bg="#f4efe6" style="background-color:#f4efe6">
+      <svg class="decor" data-speed="-.12" style="--paint:#c9806a;width:min(300px,38vw);right:-60px;top:40px;--r:-28deg" viewBox="0 0 260 120"><use href="#i-roller-flat"/></svg>
+      <svg class="decor decor--splat" data-speed=".08" style="color:#d4dcc8;width:200px;left:-60px;bottom:40px" viewBox="0 0 200 200"><use href="#i-splat"/></svg>
+
+      <div class="sobre__grid">
+        <div>
+          <p class="tag reveal">quem somos</p>
+          <h2 class="reveal">Mais de 30 anos<br>misturando <span class="swipe" style="--c:#bfe3a5">técnica</span><br>e capricho.</h2>
+          <p class="lead reveal">A Tintas RC nasceu no balcão, conversando com pintor, com dono de casa e com quem toca obra grande. Somos multimarcas: aqui você compara, tira dúvida e sai com a tinta certa, na quantidade certa. Na loja, a máquina de tingimento prepara o seu tom enquanto você toma um café.</p>
+          <ul class="facts">
+            <li class="reveal"><strong><span data-count="30">0</span>+</strong><span>anos de balcão</span></li>
+            <li class="reveal"><strong data-count="9">0</strong><span>marcas na prateleira</span></li>
+            <li class="reveal"><strong data-count="2">0</strong><span>lojas: SP e Santo André</span></li>
+          </ul>
+        </div>
+
+        <!-- leque de cores que abre com o scroll -->
+        <div class="fan reveal" id="fan" aria-hidden="true">
+          <div class="fan__pin"></div>
         </div>
       </div>
-      <figure class="manifesto__art reveal" aria-hidden="true">
-        <div class="swatch-stack">
-          <span style="--c:#26408B;--r:-14deg;--d:0s"></span>
-          <span style="--c:#57A752;--r:-4deg;--d:.1s"></span>
-          <span style="--c:#E8B4A0;--r:6deg;--d:.2s"></span>
-          <span style="--c:#F2E6CF;--r:15deg;--d:.3s"></span>
-        </div>
-      </figure>
     </section>
 
-    <!-- PALETA INTERATIVA -->
-    <section class="paleta section" id="paleta">
-      <header class="section__head">
-        <p class="eyebrow reveal">02 · Laboratório de cor</p>
-        <h2 class="reveal">Experimente antes<br>de <em>sentir</em>.</h2>
-        <p class="section__lead reveal">Toque em um tom e veja o ambiente ganhar vida. Uma pequena prévia do que fazemos com você na loja, com calma e de perto.</p>
+    <div class="roll" style="--from:#f4efe6;--to:#d4dcc8" aria-hidden="true"><div class="roll__paint"></div><svg class="roll__tool" viewBox="0 0 120 240"><use href="#i-roller"/></svg></div>
+
+    <!-- ================= LABORATÓRIO DE COR ================= -->
+    <section class="paleta section" id="paleta" data-bg="#d4dcc8" style="background-color:#d4dcc8">
+      <svg class="decor" data-speed="-.1" style="--paint:#26408b;width:min(110px,16vw);right:6%;top:60px;--r:24deg" viewBox="0 0 70 260"><use href="#i-brush"/></svg>
+      <header class="head">
+        <p class="tag reveal">laboratório de cor</p>
+        <h2 class="reveal">Escolha a cor<br>antes de <span class="swipe" style="--c:#f3c9b7">abrir a lata</span>.</h2>
+        <p class="lead reveal">Toque num tom e veja a sala mudar. Gostou? Leve o nome da cor pra loja e a gente prepara na máquina.</p>
       </header>
 
       <div class="lab">
@@ -155,243 +231,240 @@
             </g>
           </svg>
           <div class="lab__label">
-            <span class="lab__chip" id="chip"></span>
+            <span class="lab__chip"></span>
             <div><strong id="colorName">Azul Profundo RC</strong><small id="colorHex">#26408B</small></div>
           </div>
         </div>
 
         <div class="lab__palette">
+          <p class="note lab__note-hand">toque numa cor<svg viewBox="0 0 120 80"><use href="#i-arrow"/></svg></p>
           <div class="moods reveal" role="tablist" aria-label="Atmosferas">
             <button role="tab" aria-selected="true" data-mood="serenidade">Serenidade</button>
             <button role="tab" aria-selected="false" data-mood="aconchego">Aconchego</button>
             <button role="tab" aria-selected="false" data-mood="natureza">Natureza</button>
+            <button role="tab" aria-selected="false" data-mood="terra">Terra</button>
             <button role="tab" aria-selected="false" data-mood="ousadia">Ousadia</button>
           </div>
           <ul class="swatches" id="swatches" aria-label="Cores"></ul>
-          <p class="lab__note reveal">As cores na tela são uma inspiração. Na loja, nossa <strong>máquina de tingimento</strong> prepara o tom exato para o seu ambiente.</p>
+          <p class="small reveal">As cores na tela são uma inspiração. Na loja, a gente faz o tom exato pro seu ambiente.</p>
         </div>
       </div>
     </section>
 
-    <!-- PRODUTOS -->
-    <section class="produtos section" id="produtos">
-      <header class="section__head section__head--row">
+    <div class="roll" style="--from:#d4dcc8;--to:#efe1c9" aria-hidden="true"><div class="roll__paint"></div><svg class="roll__tool" viewBox="0 0 120 240"><use href="#i-roller"/></svg></div>
+
+    <!-- ================= PRODUTOS ================= -->
+    <section class="produtos section" id="produtos" data-bg="#efe1c9" style="background-color:#efe1c9">
+      <svg class="decor" data-speed=".1" style="--paint:#d9a63a;--label:#2f5d3a;width:min(180px,26vw);left:-30px;bottom:60px;--r:-8deg" viewBox="0 0 220 240"><use href="#i-can"/></svg>
+      <header class="head head--row">
         <div>
-          <p class="eyebrow reveal">03 · O que você encontra</p>
-          <h2 class="reveal">Matéria-prima<br>para <em>obras-primas</em>.</h2>
+          <p class="tag reveal">o que tem na loja</p>
+          <h2 class="reveal">Da preparação<br>ao <span class="swipe" style="--c:#c9d3f0">acabamento</span>.</h2>
         </div>
-        <p class="section__lead reveal">Da preparação ao acabamento, reunimos produtos para obra, reforma e manutenção, de casas, comércios e indústrias.</p>
+        <p class="lead reveal">Produtos para obra, reforma e manutenção. Casa, comércio ou indústria: se é de pintura, provavelmente tem aqui.</p>
       </header>
 
-      <div class="cards">
-        <article class="card reveal" style="--accent:#26408B">
-          <div class="card__art"><canvas data-blob="#26408B,#7d9ce0,#f2e6cf"></canvas></div>
-          <span class="card__n">i.</span>
-          <h3>Tintas</h3>
-          <p>Imobiliárias para interiores e fachadas, em diferentes linhas e acabamentos, com cor sob medida na nossa máquina de tingimento.</p>
-          <a href="#contato" class="card__link">Consultar <span aria-hidden="true">→</span></a>
+      <div class="chips">
+        <article class="chip reveal" style="--c:#26408b">
+          <div class="chip__tones"><span>RC 01</span></div>
+          <div class="chip__body">
+            <h3>Tintas</h3>
+            <p>Imobiliárias para dentro e fora de casa, em várias linhas e acabamentos, com cor sob medida.</p>
+            <a href="#contato" class="chip__link">Consultar →</a>
+          </div>
         </article>
-        <article class="card reveal" style="--accent:#C9806A">
-          <div class="card__art"><canvas data-blob="#C9806A,#f3cdb8,#57A752"></canvas></div>
-          <span class="card__n">ii.</span>
-          <h3>Texturas</h3>
-          <p>Grafiatos, efeitos e acabamentos decorativos para superfícies que se tocam com os olhos.</p>
-          <a href="#contato" class="card__link">Consultar <span aria-hidden="true">→</span></a>
+        <article class="chip reveal" style="--c:#c9806a">
+          <div class="chip__tones"><span>RC 02</span></div>
+          <div class="chip__body">
+            <h3>Texturas</h3>
+            <p>Grafiatos, efeitos e acabamentos decorativos pra parede ganhar relevo e personalidade.</p>
+            <a href="#contato" class="chip__link">Consultar →</a>
+          </div>
         </article>
-        <article class="card reveal" style="--accent:#8E5B3E">
-          <div class="card__art"><canvas data-blob="#8E5B3E,#e2cdb0,#26408B"></canvas></div>
-          <span class="card__n">iii.</span>
-          <h3>Vernizes</h3>
-          <p>Proteção e beleza para madeiras, realçando o veio natural de cada peça.</p>
-          <a href="#contato" class="card__link">Consultar <span aria-hidden="true">→</span></a>
+        <article class="chip reveal" style="--c:#8e5b3e">
+          <div class="chip__tones"><span>RC 03</span></div>
+          <div class="chip__body">
+            <h3>Vernizes</h3>
+            <p>Proteção e acabamento para madeira, do deck à porta da sala.</p>
+            <a href="#contato" class="chip__link">Consultar →</a>
+          </div>
         </article>
-        <article class="card reveal" style="--accent:#1F4E5A">
-          <div class="card__art"><canvas data-blob="#1F4E5A,#86a99a,#f2e6cf"></canvas></div>
-          <span class="card__n">iv.</span>
-          <h3>Impermeabilizantes</h3>
-          <p>Proteção e manutenção para lajes, paredes e superfícies expostas ao tempo.</p>
-          <a href="#contato" class="card__link">Consultar <span aria-hidden="true">→</span></a>
+        <article class="chip reveal" style="--c:#1f4e5a">
+          <div class="chip__tones"><span>RC 04</span></div>
+          <div class="chip__body">
+            <h3>Impermeabilizantes</h3>
+            <p>Para laje, parede e tudo que pega chuva e sol todo dia.</p>
+            <a href="#contato" class="chip__link">Consultar →</a>
+          </div>
         </article>
-        <article class="card reveal" style="--accent:#2b2b2b">
-          <div class="card__art"><canvas data-blob="#2b2b2b,#9a9a9a,#57A752"></canvas></div>
-          <span class="card__n">v.</span>
-          <h3>Acessórios</h3>
-          <p>Rolos, pincéis, fitas, massas e ferramentas: tudo o que separa um bom trabalho de um trabalho memorável.</p>
-          <a href="#contato" class="card__link">Consultar <span aria-hidden="true">→</span></a>
+        <article class="chip reveal" style="--c:#d9a63a">
+          <div class="chip__tones"><span>RC 05</span></div>
+          <div class="chip__body">
+            <h3>Acessórios</h3>
+            <p>Rolos, pincéis, fitas, massas, lixas e ferramentas pra facilitar o serviço.</p>
+            <a href="#contato" class="chip__link">Consultar →</a>
+          </div>
         </article>
-        <article class="card reveal" style="--accent:#57A752">
-          <div class="card__art"><canvas data-blob="#57A752,#bfe3a5,#26408B"></canvas></div>
-          <span class="card__n">vi.</span>
-          <h3>Soluções industriais</h3>
-          <p>Esmaltes, fundos, automotivas, solventes e anticorrosivos. Consulte nossa equipe para necessidades específicas.</p>
-          <a href="#contato" class="card__link">Consultar <span aria-hidden="true">→</span></a>
+        <article class="chip reveal" style="--c:#57a752">
+          <div class="chip__tones"><span>RC 06</span></div>
+          <div class="chip__body">
+            <h3>Industriais</h3>
+            <p>Esmaltes, fundos, automotivas, solventes e anticorrosivos. Fale com a equipe sobre o seu caso.</p>
+            <a href="#contato" class="chip__link">Consultar →</a>
+          </div>
         </article>
       </div>
     </section>
 
-    <!-- CITAÇÃO -->
-    <section class="quote section">
-      <svg class="quote__stroke" viewBox="0 0 1200 300" preserveAspectRatio="none" aria-hidden="true">
-        <path id="strokePath" d="M40 200 C 220 60, 380 260, 560 140 S 900 60, 1160 160" />
-      </svg>
+    <div class="roll" style="--from:#efe1c9;--to:#c9806a" aria-hidden="true"><div class="roll__paint"></div><svg class="roll__tool" viewBox="0 0 120 240"><use href="#i-roller"/></svg></div>
+
+    <!-- ================= FRASE ================= -->
+    <section class="frase section" data-bg="#c9806a" style="background-color:#c9806a">
+      <svg class="decor decor--splat" data-speed="-.08" style="color:#b86f59;width:280px;right:4%;top:10%" viewBox="0 0 200 200"><use href="#i-splat"/></svg>
+      <svg class="decor decor--splat" data-speed=".1" style="color:#d8957f;width:160px;left:6%;bottom:8%" viewBox="0 0 200 200"><use href="#i-splat"/></svg>
       <blockquote class="reveal">
-        <p>“Cada pintor merece ser valorizado. Cada cliente merece ser ouvido. <em>Cada cor merece o seu tempo.</em>”</p>
-        <cite>— Equipe Tintas RC</cite>
+        <p>Cada pintor merece ser valorizado. Cada cliente merece ser ouvido. Cada cor merece o seu tempo.</p>
+        <cite>equipe Tintas RC</cite>
       </blockquote>
     </section>
 
-    <!-- ATELIÊ / GALERIA -->
-    <section class="atelie section" id="atelie">
-      <header class="section__head section__head--row">
+    <div class="roll" style="--from:#c9806a;--to:#f4efe6" aria-hidden="true"><div class="roll__paint"></div><svg class="roll__tool" viewBox="0 0 120 240"><use href="#i-roller"/></svg></div>
+
+    <!-- ================= A LOJA ================= -->
+    <section class="loja section" id="loja" data-bg="#f4efe6" style="background-color:#f4efe6">
+      <svg class="decor" data-speed="-.14" style="--paint:#26408b;width:min(280px,34vw);right:-40px;top:20px;--r:16deg" viewBox="0 0 260 120"><use href="#i-roller-flat"/></svg>
+      <header class="head head--row">
         <div>
-          <p class="eyebrow reveal">04 · Nossa loja</p>
-          <h2 class="reveal">Um ateliê<br><em>de verdade</em>.</h2>
+          <p class="tag reveal">fotos da nossa loja</p>
+          <h2 class="reveal">Prateleira cheia<br>e <span class="swipe" style="--c:#bfe3a5">balcão aberto</span>.</h2>
         </div>
-        <p class="section__lead reveal">Fotos reais da nossa estrutura na Av. Ragueb Chohfi: prateleiras cheias de possibilidades, mostruário de texturas e uma equipe pronta para te atender de perto.</p>
+        <p class="lead reveal">Av. Ragueb Chohfi, 3205. Venha ver as cores de perto, comparar marcas e conversar com quem entende.</p>
       </header>
-      <!-- Para trocar uma foto, substitua o arquivo em assets/img/loja/ ou o data-photo. -->
+
       <div class="gallery paint-in">
-        <figure class="frame" data-photo="assets/img/loja/fachada-vertical.jpg" data-seed="1">
-          <figcaption><span>A loja</span>Portas abertas para a sua ideia.</figcaption>
-        </figure>
-        <figure class="frame" data-photo="assets/img/loja/fachada.jpg" data-seed="2">
-          <figcaption><span>Fachada</span>Av. Ragueb Chohfi, 3205.</figcaption>
-        </figure>
-        <figure class="frame" data-photo="assets/img/loja/texturas.jpg" data-seed="3">
-          <figcaption><span>Mostruário</span>Texturas para ver e sentir.</figcaption>
-        </figure>
-        <figure class="frame" data-photo="assets/img/loja/corredor-coral.jpg" data-seed="4">
-          <figcaption><span>Multimarcas</span>Mais opções para comparar.</figcaption>
-        </figure>
-        <figure class="frame" data-photo="assets/img/loja/balcao.jpg" data-seed="1">
-          <figcaption><span>Atendimento</span>Escolher junto, sem pressa.</figcaption>
-        </figure>
-        <figure class="frame" data-photo="assets/img/loja/novacor.jpg" data-seed="2">
-          <figcaption><span>Estoque</span>Pronto para levar.</figcaption>
-        </figure>
-        <figure class="frame" data-photo="assets/img/loja/estoque.jpg" data-seed="3">
-          <figcaption><span>Variedade</span>Do galão à lata, cada projeto tem a sua.</figcaption>
-        </figure>
-        <figure class="frame" data-photo="assets/img/loja/raul-das-tintas.jpg" data-seed="4">
-          <figcaption><span>Raul das Tintas</span>Parceria de fábrica.</figcaption>
-        </figure>
+        <figure class="photo"><img src="assets/img/loja/fachada-vertical.jpg" alt="Entrada da loja Tintas RC com prateleiras de tintas" loading="lazy"><figcaption>a loja</figcaption></figure>
+        <figure class="photo"><img src="assets/img/loja/fachada.jpg" alt="Fachada da Tintas RC na Av. Ragueb Chohfi" loading="lazy"><figcaption>Av. Ragueb Chohfi, 3205</figcaption></figure>
+        <figure class="photo"><img src="assets/img/loja/texturas.jpg" alt="Mostruário de texturas" loading="lazy"><figcaption>mostruário de texturas</figcaption></figure>
+        <figure class="photo"><img src="assets/img/loja/corredor-coral.jpg" alt="Corredor com latas Coral e outras marcas" loading="lazy"><figcaption>multimarcas</figcaption></figure>
+        <figure class="photo"><img src="assets/img/loja/balcao.jpg" alt="Balcão de atendimento e prateleiras de esmaltes" loading="lazy"><figcaption>o balcão</figcaption></figure>
+        <figure class="photo"><img src="assets/img/loja/novacor.jpg" alt="Pilhas de latas Novacor e Sherwin-Williams" loading="lazy"><figcaption>estoque</figcaption></figure>
+        <figure class="photo"><img src="assets/img/loja/estoque.jpg" alt="Latas Raul das Tintas empilhadas" loading="lazy"><figcaption>variedade</figcaption></figure>
+        <figure class="photo"><img src="assets/img/loja/raul-das-tintas.jpg" alt="Parede de latas Raul das Tintas" loading="lazy"><figcaption>Raul das Tintas</figcaption></figure>
+      </div>
+
+      <div class="marcas">
+        <p class="tag tag--center reveal">marcas que você encontra</p>
+        <ul class="marcas__list reveal">
+          <li style="--c:#e3a93b">Suvinil</li>
+          <li style="--c:#57a752">Coral</li>
+          <li style="--c:#26408b">Sherwin-Williams</li>
+          <li style="--c:#c9806a">Novacor</li>
+          <li style="--c:#1f4e5a">Martins Tintas</li>
+          <li style="--c:#8e5b3e">Sayerlack</li>
+          <li style="--c:#d9a63a">Atlas</li>
+          <li style="--c:#6e2438">Bautech</li>
+          <li style="--c:#2f4fd1">Raul das Tintas</li>
+        </ul>
+        <p class="note note--center">e outras. pergunta no balcão!</p>
       </div>
     </section>
 
-    <!-- MARCAS -->
-    <section class="marcas section">
-      <p class="eyebrow reveal">Multimarcas · encontre marcas para cada necessidade</p>
-      <ul class="marcas__list reveal">
-        <li>Suvinil</li>
-        <li>Coral</li>
-        <li>Sherwin-Williams</li>
-        <li>Novacor</li>
-        <li>Martins Tintas</li>
-        <li>Sayerlack</li>
-        <li>Atlas</li>
-        <li>Bautech</li>
-        <li>Raul das Tintas</li>
-        <li class="marcas__more">e outras marcas. Consulte nossa loja.</li>
-      </ul>
-    </section>
+    <div class="roll" style="--from:#f4efe6;--to:#2f5d3a" aria-hidden="true"><div class="roll__paint"></div><svg class="roll__tool" viewBox="0 0 120 240"><use href="#i-roller"/></svg></div>
 
-    <!-- TINTAS RECICLADAS -->
-    <section class="recicladas section" id="recicladas">
+    <!-- ================= RECICLADAS ================= -->
+    <section class="recicladas section" id="recicladas" data-bg="#2f5d3a" style="background-color:#2f5d3a">
       <div class="recicladas__art reveal" aria-hidden="true">
-        <svg viewBox="0 0 400 400">
-          <defs>
-            <linearGradient id="loop" x1="0" x2="1" y1="0" y2="1">
-              <stop offset="0" stop-color="#57A752"/><stop offset="1" stop-color="#26408B"/>
-            </linearGradient>
-          </defs>
-          <circle class="recicladas__ring" cx="200" cy="200" r="150" />
-          <path class="recicladas__drop" d="M200 105 C240 165 265 195 265 235 A65 65 0 0 1 135 235 C135 195 160 165 200 105 Z"/>
-        </svg>
+        <svg class="recicladas__can" style="--paint:#bfe3a5;--label:#57a752" viewBox="0 0 220 240"><use href="#i-can"/></svg>
+        <svg class="recicladas__loop" viewBox="0 0 400 400"><circle cx="200" cy="200" r="170"/></svg>
       </div>
       <div class="recicladas__body">
-        <p class="eyebrow reveal">Uma solução diferente</p>
-        <h2 class="reveal">Tintas recicladas:<br>a cor que <em>renasce</em>.</h2>
-        <p class="section__lead reveal">Também trabalhamos com tintas recicladas, uma alternativa econômica e consciente que dá nova vida ao que seria descartado. Fale com nossa equipe para consultar disponibilidade, cores, aplicações e condições.</p>
-        <div class="hero__actions reveal" style="margin-top:36px">
-          <a href="#contato" class="btn btn--solid js-whats" data-msg="Olá, Tintas RC! Quero saber mais sobre as tintas recicladas.">Consultar pelo WhatsApp</a>
+        <p class="tag tag--dark reveal">uma solução diferente</p>
+        <h2 class="reveal">Tintas recicladas:<br>a cor que <span class="swipe" style="--c:#57a752">renasce</span>.</h2>
+        <p class="lead reveal">A gente também trabalha com tintas recicladas: uma alternativa econômica que dá nova vida ao que seria descartado. Pergunte pela disponibilidade, cores, aplicações e condições.</p>
+        <div class="hero__actions reveal">
+          <a href="https://wa.me/5511977272118" class="btn btn--light js-whats" data-msg="Olá, Tintas RC! Quero saber mais sobre as tintas recicladas.">Perguntar pelo WhatsApp</a>
         </div>
       </div>
     </section>
 
-    <!-- DEPOIMENTOS -->
-    <section class="depoimentos section">
-      <header class="section__head">
-        <p class="eyebrow reveal">Depoimentos · Google</p>
-        <h2 class="reveal">Quem pinta<br>com a gente <em>volta</em>.</h2>
-        <p class="rating reveal" aria-label="Avaliações cinco estrelas no Google"><span class="stars">★★★★★</span> avaliações de clientes no Google</p>
+    <div class="roll" style="--from:#2f5d3a;--to:#f2dcd2" aria-hidden="true"><div class="roll__paint"></div><svg class="roll__tool" viewBox="0 0 120 240"><use href="#i-roller"/></svg></div>
+
+    <!-- ================= AVALIAÇÕES ================= -->
+    <section class="avaliacoes section" data-bg="#f2dcd2" style="background-color:#f2dcd2">
+      <svg class="decor" data-speed="-.1" style="--paint:#57a752;width:min(100px,14vw);right:6%;top:50px;--r:22deg" viewBox="0 0 70 260"><use href="#i-brush"/></svg>
+      <header class="head">
+        <p class="tag reveal">o que dizem no google</p>
+        <h2 class="reveal">Quem compra<br>uma vez, <span class="swipe" style="--c:#ffd98a">volta</span>.</h2>
       </header>
-      <div class="reviews">
-        <figure class="review review--big reveal">
+      <div class="notes">
+        <figure class="paper paper--big reveal">
           <blockquote>“Você encontra tudo relacionado a tintas e afins, fazem entrega. Os preços são bons. Tem bastante variedade. Eles têm máquina pra fazer a cor da tinta. Também trabalham com tintas automotivas, solventes, produtos pra ferrugem.”</blockquote>
-          <figcaption><span class="avatar" style="--c:#26408B">M</span>Mestre · Local Guide <span class="stars">★★★★★</span></figcaption>
+          <figcaption><span class="stars">★★★★★</span>Mestre, Local Guide</figcaption>
         </figure>
-        <figure class="review reveal">
+        <figure class="paper reveal">
           <blockquote>“Além de só ter produto de qualidade, o atendimento é ótimo. Recomendo muito.”</blockquote>
-          <figcaption><span class="avatar" style="--c:#57A752">A</span>Andrey Ozelin · Local Guide <span class="stars">★★★★★</span></figcaption>
+          <figcaption><span class="stars">★★★★★</span>Andrey Ozelin</figcaption>
         </figure>
-        <figure class="review reveal">
+        <figure class="paper reveal">
           <blockquote>“Fui por indicação, e tanto os preços como o atendimento são excelentes. Tenho convicção que não comprarei em outro lugar!”</blockquote>
-          <figcaption><span class="avatar" style="--c:#C9806A">R</span>Renato Holanda <span class="stars">★★★★★</span></figcaption>
+          <figcaption><span class="stars">★★★★★</span>Renato Holanda</figcaption>
         </figure>
-        <figure class="review reveal">
+        <figure class="paper reveal">
           <blockquote>“Preço bom e atendimento profissional.”</blockquote>
-          <figcaption><span class="avatar" style="--c:#1F4E5A">O</span>Osvaldo Gomes <span class="stars">★★★★★</span></figcaption>
-        </figure>
-        <figure class="review reveal">
-          <blockquote>“Bacana.”</blockquote>
-          <figcaption><span class="avatar" style="--c:#8E5B3E">F</span>Fábio Santos <span class="stars">★★★★★</span></figcaption>
+          <figcaption><span class="stars">★★★★★</span>Osvaldo Gomes</figcaption>
         </figure>
       </div>
     </section>
 
-    <!-- PROCESSO -->
-    <section class="processo section">
-      <header class="section__head">
-        <p class="eyebrow reveal">05 · Como cuidamos</p>
-        <h2 class="reveal">Um caminho <em>gentil</em><br>da ideia à parede.</h2>
+    <div class="roll" style="--from:#f2dcd2;--to:#f4efe6" aria-hidden="true"><div class="roll__paint"></div><svg class="roll__tool" viewBox="0 0 120 240"><use href="#i-roller"/></svg></div>
+
+    <!-- ================= COMO FUNCIONA ================= -->
+    <section class="passos section" data-bg="#f4efe6" style="background-color:#f4efe6">
+      <svg class="decor" data-speed=".12" style="--paint:#1f4e5a;--label:#c9806a;width:min(150px,22vw);right:3%;bottom:40px;--r:6deg" viewBox="0 0 220 240"><use href="#i-can"/></svg>
+      <header class="head">
+        <p class="tag reveal">como a gente atende</p>
+        <h2 class="reveal">Da ideia<br>à <span class="swipe" style="--c:#c9d3f0">última demão</span>.</h2>
       </header>
       <ol class="steps">
-        <li class="reveal"><span class="steps__dot" style="--c:#26408B"></span><h3>Escuta</h3><p>Entendemos o espaço, a luz, o uso e o sentimento que você quer criar.</p></li>
-        <li class="reveal"><span class="steps__dot" style="--c:#57A752"></span><h3>Curadoria</h3><p>Sugerimos linhas, acabamentos e quantidades exatas, sem desperdício.</p></li>
-        <li class="reveal"><span class="steps__dot" style="--c:#C9806A"></span><h3>Tingimento</h3><p>Preparamos o seu tom com precisão de máquina e olhar de artista.</p></li>
-        <li class="reveal"><span class="steps__dot" style="--c:#2b2b2b"></span><h3>Entrega</h3><p>Levamos até a sua obra e seguimos por perto até a última demão. Confiança se constrói assim.</p></li>
+        <li class="reveal" style="--c:#26408b"><span class="steps__drop"><b>1</b></span><h3>Conversa</h3><p>Você conta o que quer pintar, onde e como. A gente escuta e pergunta.</p></li>
+        <li class="reveal" style="--c:#57a752"><span class="steps__drop"><b>2</b></span><h3>Indicação</h3><p>Sugerimos a linha, o acabamento e a quantidade certa, sem sobrar lata.</p></li>
+        <li class="reveal" style="--c:#c9806a"><span class="steps__drop"><b>3</b></span><h3>Cor na hora</h3><p>A máquina de tingimento prepara o seu tom exato, ali na sua frente.</p></li>
+        <li class="reveal" style="--c:#d9a63a"><span class="steps__drop"><b>4</b></span><h3>Entrega</h3><p>Levamos até a obra e ficamos por perto se surgir dúvida.</p></li>
       </ol>
     </section>
 
-    <!-- CONTATO -->
-    <section class="contato section" id="contato">
-      <canvas id="fluid2" class="contato__canvas" aria-hidden="true"></canvas>
-      <div class="contato__inner">
+    <div class="roll" style="--from:#f4efe6;--to:#19295e" aria-hidden="true"><div class="roll__paint"></div><svg class="roll__tool" viewBox="0 0 120 240"><use href="#i-roller"/></svg></div>
+
+    <!-- ================= CONTATO ================= -->
+    <section class="contato section" id="contato" data-bg="#19295e" style="background-color:#19295e">
+      <svg class="decor decor--splat" data-speed="-.08" style="color:#24387a;width:340px;right:-80px;top:-20px" viewBox="0 0 200 200"><use href="#i-splat"/></svg>
+      <svg class="decor decor--splat" data-speed=".08" style="color:#2f4a96;width:180px;left:-40px;bottom:10%" viewBox="0 0 200 200"><use href="#i-splat"/></svg>
+      <div class="contato__grid">
         <div>
-          <p class="eyebrow eyebrow--light reveal">06 · Visite o ateliê</p>
-          <h2 class="reveal">Vamos dar cor<br>ao que é <em>seu</em>?</h2>
-          <p class="contato__lead reveal">Dúvidas, sugestões e orçamentos: passe em uma de nossas lojas, mande uma mensagem ou ligue. Teremos um café e uma cartela de cores esperando por você.</p>
+          <p class="tag tag--dark reveal">passa aqui</p>
+          <h2 class="reveal">Vamos dar cor<br>ao seu <span class="swipe" style="--c:#57a752">projeto</span>?</h2>
+          <p class="lead reveal">Dúvidas, sugestões e orçamentos: passe numa das lojas, mande mensagem ou ligue. O café é por nossa conta.</p>
           <div class="hero__actions reveal">
-            <a class="btn btn--solid btn--light js-whats" href="https://wa.me/5511977272118" target="_blank" rel="noopener" data-msg="Olá, Tintas RC! Gostaria de um orçamento.">Falar no WhatsApp</a>
-            <a class="btn btn--link btn--link-light" href="https://www.instagram.com/tintasrc_oficial" target="_blank" rel="noopener">@tintasrc_oficial <span aria-hidden="true">↗</span></a>
+            <a href="https://wa.me/5511977272118" class="btn btn--light js-whats" data-msg="Olá, Tintas RC! Gostaria de um orçamento.">Falar no WhatsApp</a>
+            <a href="https://www.instagram.com/tintasrc_oficial" class="btn btn--ghost-light" target="_blank" rel="noopener">@tintasrc_oficial</a>
           </div>
         </div>
-        <div class="info reveal">
-          <article class="store">
-            <span class="store__tag">Loja Zona Leste · SP</span>
-            <address>Av. Ragueb Chohfi, 3205<br>Parque Boa Esperança · São Paulo<br><small>CEP 08341-420</small></address>
+        <div class="stores">
+          <article class="store reveal">
+            <p class="store__tag">loja Zona Leste · SP</p>
+            <address>Av. Ragueb Chohfi, 3205<br>Parque Boa Esperança, São Paulo<br><small>CEP 08341-420</small></address>
             <p><a href="tel:+551127311070">(11) 2731-1070</a> · <a href="tel:+551127353514">(11) 2735-3514</a><br><a href="https://wa.me/5511977272118" target="_blank" rel="noopener">WhatsApp (11) 97727-2118</a></p>
-            <a class="store__map" href="https://www.google.com/maps/search/?api=1&amp;query=Tintas+RC+Av.+Ragueb+Chohfi+3205+S%C3%A3o+Paulo" target="_blank" rel="noopener">Ver no mapa ↗</a>
+            <a class="store__map" href="https://www.google.com/maps/search/?api=1&amp;query=Tintas+RC+Av.+Ragueb+Chohfi+3205+S%C3%A3o+Paulo" target="_blank" rel="noopener">abrir no mapa ↗</a>
           </article>
-          <article class="store">
-            <span class="store__tag">Loja ABC · Santo André</span>
-            <address>Av. das Nações, 470<br>Parque Capuava · Santo André</address>
+          <article class="store reveal">
+            <p class="store__tag">loja ABC · Santo André</p>
+            <address>Av. das Nações, 470<br>Parque Capuava, Santo André</address>
             <p><a href="tel:+551149754215">(11) 4975-4215</a></p>
-            <a class="store__map" href="https://www.google.com/maps/search/?api=1&amp;query=Tintas+RC+Av.+das+Na%C3%A7%C3%B5es+470+Santo+Andr%C3%A9" target="_blank" rel="noopener">Ver no mapa ↗</a>
+            <a class="store__map" href="https://www.google.com/maps/search/?api=1&amp;query=Tintas+RC+Av.+das+Na%C3%A7%C3%B5es+470+Santo+Andr%C3%A9" target="_blank" rel="noopener">abrir no mapa ↗</a>
           </article>
-          <dl class="hours">
-            <div><dt>Horários</dt><dd>Seg a Sex · 8h às 18h<br>Sábado · 8h às 13h<br>Domingo · fechado</dd></div>
-            <div><dt>E-mail</dt><dd><a href="mailto:tintasrc@tintasrc.com.br">tintasrc@tintasrc.com.br</a></dd></div>
+          <dl class="hours reveal">
+            <div><dt>horários</dt><dd>Seg a sex, 8h às 18h<br>Sábado, 8h às 13h<br>Domingo fechado</dd></div>
+            <div><dt>e-mail</dt><dd><a href="mailto:tintasrc@tintasrc.com.br">tintasrc@tintasrc.com.br</a></dd></div>
           </dl>
         </div>
       </div>
@@ -400,7 +473,7 @@
 
   <footer class="footer">
     <img src="assets/img/logo-light.png" alt="Tintas RC" width="120" height="82" loading="lazy">
-    <p>© <span id="year"></span> Tintas RC · Loja de Tintas · Zona Leste &amp; ABC · CNPJ 62.540.530/0001-80</p>
+    <p>© <span id="year"></span> Tintas RC · Loja de Tintas · Zona Leste e ABC · CNPJ 62.540.530/0001-80</p>
     <a href="#topo" class="footer__top">voltar ao topo ↑</a>
   </footer>
 
