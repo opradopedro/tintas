@@ -1,0 +1,348 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Tintas RC — Ateliê da Cor | Zona Leste &amp; ABC</title>
+  <meta name="description" content="Tintas RC: mais de 30 anos de experiência em tintas imobiliárias, industriais, automotivas e complementos para pintura e acabamento. Lojas na Zona Leste de SP e em Santo André.">
+  <meta name="theme-color" content="#f6f1e8">
+  <meta property="og:title" content="Tintas RC — Ateliê da Cor">
+  <meta property="og:description" content="Mais de 30 anos dando cor aos sonhos da Zona Leste e do ABC.">
+  <meta property="og:image" content="assets/img/logo-badge.png">
+  <link rel="icon" href="assets/img/favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,600;1,9..144,300;1,9..144,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+  <!-- grão de papel sobre tudo -->
+  <div class="grain" aria-hidden="true"></div>
+  <canvas id="trail" aria-hidden="true"></canvas>
+
+  <!-- loader: uma gota que se espalha -->
+  <div class="loader" aria-hidden="true">
+    <div class="loader__drop"></div>
+    <img src="assets/img/logo.png" alt="" class="loader__logo">
+  </div>
+
+  <header class="nav" id="nav">
+    <a href="#topo" class="nav__brand" aria-label="Tintas RC — início">
+      <img src="assets/img/logo.png" alt="Tintas RC" width="110" height="75">
+    </a>
+    <nav class="nav__links" id="menu" aria-label="Principal">
+      <a href="#manifesto">Manifesto</a>
+      <a href="#paleta">Paleta</a>
+      <a href="#produtos">Produtos</a>
+      <a href="#atelie">Ateliê</a>
+      <a href="#contato">Contato</a>
+    </nav>
+    <a href="#contato" class="btn btn--ghost nav__cta">Fale com a gente</a>
+    <button class="nav__toggle" id="toggle" aria-label="Abrir menu" aria-expanded="false" aria-controls="menu">
+      <span></span><span></span>
+    </button>
+  </header>
+
+  <main id="topo">
+    <!-- HERO -->
+    <section class="hero">
+      <canvas id="fluid" class="hero__canvas" aria-hidden="true"></canvas>
+      <div class="hero__inner">
+        <p class="eyebrow reveal">Mais de 30 anos de experiência em tintas</p>
+        <h1 class="hero__title">
+          <span class="line"><span>A cor é</span></span>
+          <span class="line"><span><em>a primeira</em></span></span>
+          <span class="line"><span>pincelada</span></span>
+          <span class="line"><span>do seu <em class="ink">sonho.</em></span></span>
+        </h1>
+        <p class="hero__lead reveal">Tintas, texturas e cuidado artesanal para quem trata cada parede como uma tela em branco.</p>
+        <div class="hero__actions reveal">
+          <a href="#paleta" class="btn btn--solid">Explorar cores</a>
+          <a href="#contato" class="btn btn--link">Pedir orçamento <span aria-hidden="true">→</span></a>
+        </div>
+      </div>
+      <div class="hero__scroll" aria-hidden="true"><span>role</span><i></i></div>
+      <svg class="hero__brush" viewBox="0 0 1440 120" preserveAspectRatio="none" aria-hidden="true">
+        <path d="M0,60 C120,20 240,100 380,70 C520,40 600,90 760,80 C920,70 1020,20 1180,50 C1300,72 1380,40 1440,55 L1440,120 L0,120 Z"/>
+      </svg>
+    </section>
+
+    <!-- MARQUEE -->
+    <div class="marquee" aria-hidden="true">
+      <div class="marquee__track">
+        <span>Tintas imobiliárias</span><b>✦</b><span>Tintas industriais</span><b>✦</b><span>Automotivas</span><b>✦</b><span>Solventes</span><b>✦</b><span>Anticorrosivos</span><b>✦</b><span>Complementos</span><b>✦</b><span>Cor sob medida</span><b>✦</b>
+        <span>Tintas imobiliárias</span><b>✦</b><span>Tintas industriais</span><b>✦</b><span>Automotivas</span><b>✦</b><span>Solventes</span><b>✦</b><span>Anticorrosivos</span><b>✦</b><span>Complementos</span><b>✦</b><span>Cor sob medida</span><b>✦</b>
+      </div>
+    </div>
+
+    <!-- MANIFESTO -->
+    <section class="manifesto section" id="manifesto">
+      <div class="manifesto__num reveal" aria-hidden="true">01</div>
+      <div class="manifesto__body">
+        <p class="eyebrow reveal">Manifesto</p>
+        <p class="manifesto__text split">
+          Acreditamos que pintar é um gesto delicado. É escolher a luz que vai acordar com você, o tom que vai abraçar a sua família, a textura que vai guardar as suas memórias. Há mais de três décadas, a Tintas RC une maestria no atendimento, variedade de marcas e técnica de tingimento para que cada lata aberta seja o começo de uma obra.
+        </p>
+        <div class="stats">
+          <div class="stat reveal"><strong data-count="30">0</strong><span>+ anos de<br>experiência</span></div>
+          <div class="stat reveal"><strong data-count="6">0</strong><span>dias por semana<br>de portas abertas</span></div>
+          <div class="stat reveal"><strong data-count="100">0</strong><span>% de cuidado<br>no atendimento</span></div>
+        </div>
+      </div>
+      <figure class="manifesto__art reveal" aria-hidden="true">
+        <div class="swatch-stack">
+          <span style="--c:#26408B;--r:-14deg;--d:0s"></span>
+          <span style="--c:#57A752;--r:-4deg;--d:.1s"></span>
+          <span style="--c:#E8B4A0;--r:6deg;--d:.2s"></span>
+          <span style="--c:#F2E6CF;--r:15deg;--d:.3s"></span>
+        </div>
+      </figure>
+    </section>
+
+    <!-- PALETA INTERATIVA -->
+    <section class="paleta section" id="paleta">
+      <header class="section__head">
+        <p class="eyebrow reveal">02 · Laboratório de cor</p>
+        <h2 class="reveal">Experimente antes<br>de <em>sentir</em>.</h2>
+        <p class="section__lead reveal">Toque em um tom e veja o ambiente ganhar vida. Uma pequena prévia do que fazemos com você na loja, com calma e de perto.</p>
+      </header>
+
+      <div class="lab">
+        <div class="lab__room reveal" id="room">
+          <svg viewBox="0 0 800 520" role="img" aria-labelledby="roomTitle">
+            <title id="roomTitle">Ilustração de uma sala com a parede na cor selecionada</title>
+            <defs>
+              <linearGradient id="light" x1="0" x2="1" y1="0" y2="1">
+                <stop offset="0" stop-color="#fff" stop-opacity=".35"/>
+                <stop offset=".6" stop-color="#fff" stop-opacity="0"/>
+                <stop offset="1" stop-color="#000" stop-opacity=".18"/>
+              </linearGradient>
+              <linearGradient id="floor" x1="0" x2="0" y1="0" y2="1">
+                <stop offset="0" stop-color="#c9a37c"/><stop offset="1" stop-color="#a47a55"/>
+              </linearGradient>
+            </defs>
+            <rect class="wall" x="0" y="0" width="800" height="400"/>
+            <rect x="0" y="0" width="800" height="400" fill="url(#light)"/>
+            <rect x="0" y="400" width="800" height="120" fill="url(#floor)"/>
+            <rect x="0" y="396" width="800" height="8" fill="#f4efe6"/>
+            <!-- janela de luz -->
+            <path d="M560 0 L760 0 L640 400 L420 400 Z" fill="#fff" opacity=".12"/>
+            <!-- quadro -->
+            <rect x="110" y="90" width="170" height="210" rx="2" fill="#f7f3ec" stroke="#2b2b2b" stroke-width="6"/>
+            <path d="M130 270 C170 200 200 240 220 190 C240 150 250 200 262 180 L262 280 L130 280 Z" fill="#26408B" opacity=".85"/>
+            <circle cx="225" cy="140" r="22" fill="#57A752" opacity=".85"/>
+            <!-- luminária -->
+            <line x1="610" y1="0" x2="610" y2="110" stroke="#2b2b2b" stroke-width="2"/>
+            <path d="M575 110 h70 l-12 40 h-46 z" fill="#2b2b2b"/>
+            <ellipse cx="610" cy="152" rx="26" ry="5" fill="#ffe9a8" opacity=".9"/>
+            <!-- sofá -->
+            <g>
+              <rect x="360" y="300" width="330" height="90" rx="22" fill="#f1ebe0"/>
+              <rect x="340" y="250" width="370" height="70" rx="26" fill="#e9e1d3"/>
+              <rect x="330" y="300" width="45" height="95" rx="18" fill="#e4dbcb"/>
+              <rect x="675" y="300" width="45" height="95" rx="18" fill="#e4dbcb"/>
+              <rect x="390" y="268" width="90" height="56" rx="16" fill="#57A752" opacity=".7"/>
+              <rect x="590" y="268" width="90" height="56" rx="16" fill="#26408B" opacity=".75"/>
+              <rect x="370" y="390" width="8" height="18" fill="#6b5640"/>
+              <rect x="672" y="390" width="8" height="18" fill="#6b5640"/>
+            </g>
+            <!-- planta -->
+            <g>
+              <path d="M95 400 h60 l-8 -70 h-44 z" fill="#d8c8b0"/>
+              <path d="M125 330 C100 280 70 270 60 230 C95 245 115 270 125 330 Z" fill="#3f7d45"/>
+              <path d="M125 330 C140 270 170 250 190 215 C185 260 150 290 125 330 Z" fill="#57A752"/>
+              <path d="M125 330 C120 270 125 230 130 190 C145 240 140 290 125 330 Z" fill="#4a9150"/>
+            </g>
+          </svg>
+          <div class="lab__label">
+            <span class="lab__chip" id="chip"></span>
+            <div><strong id="colorName">Azul Profundo RC</strong><small id="colorHex">#26408B</small></div>
+          </div>
+        </div>
+
+        <div class="lab__palette">
+          <div class="moods reveal" role="tablist" aria-label="Atmosferas">
+            <button role="tab" aria-selected="true" data-mood="serenidade">Serenidade</button>
+            <button role="tab" aria-selected="false" data-mood="aconchego">Aconchego</button>
+            <button role="tab" aria-selected="false" data-mood="natureza">Natureza</button>
+            <button role="tab" aria-selected="false" data-mood="ousadia">Ousadia</button>
+          </div>
+          <ul class="swatches" id="swatches" aria-label="Cores"></ul>
+          <p class="lab__note reveal">As cores na tela são uma inspiração. Na loja, nossa <strong>máquina de tingimento</strong> prepara o tom exato para o seu ambiente.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- PRODUTOS -->
+    <section class="produtos section" id="produtos">
+      <header class="section__head section__head--row">
+        <div>
+          <p class="eyebrow reveal">03 · O que você encontra</p>
+          <h2 class="reveal">Matéria-prima<br>para <em>obras-primas</em>.</h2>
+        </div>
+        <p class="section__lead reveal">Do primeiro fundo ao último verniz, uma curadoria pensada para casas, comércios e indústrias.</p>
+      </header>
+
+      <div class="cards">
+        <article class="card reveal" style="--accent:#26408B">
+          <div class="card__art"><canvas data-blob="#26408B,#7d9ce0,#f2e6cf"></canvas></div>
+          <span class="card__n">i.</span>
+          <h3>Tintas imobiliárias</h3>
+          <p>Acrílicas, látex, acetinadas e foscas para interiores e fachadas, com acabamento impecável e alta cobertura.</p>
+          <a href="#contato" class="card__link">Consultar <span aria-hidden="true">→</span></a>
+        </article>
+        <article class="card reveal" style="--accent:#57A752">
+          <div class="card__art"><canvas data-blob="#57A752,#bfe3a5,#26408B"></canvas></div>
+          <span class="card__n">ii.</span>
+          <h3>Tintas industriais</h3>
+          <p>Esmaltes, fundos e acabamentos de alta performance para estruturas, máquinas e galpões, com a parceria da fábrica Raul das Tintas.</p>
+          <a href="#contato" class="card__link">Consultar <span aria-hidden="true">→</span></a>
+        </article>
+        <article class="card reveal" style="--accent:#C9806A">
+          <div class="card__art"><canvas data-blob="#C9806A,#f3cdb8,#57A752"></canvas></div>
+          <span class="card__n">iii.</span>
+          <h3>Automotivas &amp; especiais</h3>
+          <p>Tintas automotivas, solventes, produtos para ferrugem e soluções para quem precisa de um acabamento técnico.</p>
+          <a href="#contato" class="card__link">Consultar <span aria-hidden="true">→</span></a>
+        </article>
+        <article class="card reveal" style="--accent:#2b2b2b">
+          <div class="card__art"><canvas data-blob="#2b2b2b,#9a9a9a,#57A752"></canvas></div>
+          <span class="card__n">iv.</span>
+          <h3>Complementos</h3>
+          <p>Rolos, pincéis, massas, seladores, fitas e tudo o que separa um bom trabalho de um trabalho memorável. E a gente entrega.</p>
+          <a href="#contato" class="card__link">Consultar <span aria-hidden="true">→</span></a>
+        </article>
+      </div>
+    </section>
+
+    <!-- CITAÇÃO -->
+    <section class="quote section">
+      <svg class="quote__stroke" viewBox="0 0 1200 300" preserveAspectRatio="none" aria-hidden="true">
+        <path id="strokePath" d="M40 200 C 220 60, 380 260, 560 140 S 900 60, 1160 160" />
+      </svg>
+      <blockquote class="reveal">
+        <p>“Cada pintor merece ser valorizado. Cada cliente merece ser ouvido. <em>Cada cor merece o seu tempo.</em>”</p>
+        <cite>— Equipe Tintas RC</cite>
+      </blockquote>
+    </section>
+
+    <!-- ATELIÊ / GALERIA -->
+    <section class="atelie section" id="atelie">
+      <header class="section__head">
+        <p class="eyebrow reveal">04 · Ateliê</p>
+        <h2 class="reveal">Feito por gente<br><em>que ama cor</em>.</h2>
+        <p class="section__lead reveal">Nossa equipe, nossos pintores parceiros e os encontros que fazem das nossas lojas um ponto de cor na Zona Leste e no ABC.</p>
+      </header>
+      <!--
+        Para usar fotos reais: salve em assets/img/galeria/ e troque o
+        atributo data-photo pelo caminho da imagem (ex.: assets/img/galeria/equipe.jpg).
+        Sem foto, cada quadro exibe uma pintura generativa nas cores da marca.
+      -->
+      <div class="gallery">
+        <figure class="frame frame--tall reveal" data-photo="" data-seed="1">
+          <figcaption><span>Atendimento</span>Escolher junto, sem pressa.</figcaption>
+        </figure>
+        <figure class="frame reveal" data-photo="" data-seed="2">
+          <figcaption><span>Tingimento</span>O tom exato, gota a gota.</figcaption>
+        </figure>
+        <figure class="frame reveal" data-photo="" data-seed="3">
+          <figcaption><span>Café do Pintor</span>Você dá cor aos sonhos. E merece ser valorizado.</figcaption>
+        </figure>
+        <figure class="frame frame--wide reveal" data-photo="" data-seed="4">
+          <figcaption><span>Obras</span>Fachadas, salas, galpões e histórias.</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- MARCAS -->
+    <section class="marcas section">
+      <p class="eyebrow reveal">Marcas que trabalhamos</p>
+      <ul class="marcas__list reveal">
+        <li>Sherwin-Williams</li>
+        <li>Bautech</li>
+        <li>Raul das Tintas</li>
+        <li class="marcas__more">e uma ampla variedade de outras marcas</li>
+      </ul>
+    </section>
+
+    <!-- DEPOIMENTOS -->
+    <section class="depoimentos section">
+      <header class="section__head">
+        <p class="eyebrow reveal">Depoimentos · Google</p>
+        <h2 class="reveal">Quem pinta<br>com a gente <em>volta</em>.</h2>
+        <p class="rating reveal" aria-label="Avaliações cinco estrelas no Google"><span class="stars">★★★★★</span> avaliações de clientes no Google</p>
+      </header>
+      <div class="reviews">
+        <figure class="review review--big reveal">
+          <blockquote>“Você encontra tudo relacionado a tintas e afins, fazem entrega. Os preços são bons. Tem bastante variedade. Eles têm máquina pra fazer a cor da tinta. Também trabalham com tintas automotivas, solventes, produtos pra ferrugem.”</blockquote>
+          <figcaption><span class="avatar" style="--c:#26408B">L</span>Luciano Cavalcante dos Santos <span class="stars">★★★★★</span></figcaption>
+        </figure>
+        <figure class="review reveal">
+          <blockquote>“Preço bom e atendimento profissional.”</blockquote>
+          <figcaption><span class="avatar" style="--c:#57A752">O</span>Osvaldo Gomes <span class="stars">★★★★★</span></figcaption>
+        </figure>
+        <figure class="review reveal">
+          <blockquote>“Bacana.”</blockquote>
+          <figcaption><span class="avatar" style="--c:#C9806A">F</span>Fábio Santos <span class="stars">★★★★★</span></figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- PROCESSO -->
+    <section class="processo section">
+      <header class="section__head">
+        <p class="eyebrow reveal">05 · Como cuidamos</p>
+        <h2 class="reveal">Um caminho <em>gentil</em><br>da ideia à parede.</h2>
+      </header>
+      <ol class="steps">
+        <li class="reveal"><span class="steps__dot" style="--c:#26408B"></span><h3>Escuta</h3><p>Entendemos o espaço, a luz, o uso e o sentimento que você quer criar.</p></li>
+        <li class="reveal"><span class="steps__dot" style="--c:#57A752"></span><h3>Curadoria</h3><p>Sugerimos linhas, acabamentos e quantidades exatas, sem desperdício.</p></li>
+        <li class="reveal"><span class="steps__dot" style="--c:#C9806A"></span><h3>Tingimento</h3><p>Preparamos o seu tom com precisão de máquina e olhar de artista.</p></li>
+        <li class="reveal"><span class="steps__dot" style="--c:#2b2b2b"></span><h3>Entrega</h3><p>Levamos até a sua obra e seguimos por perto até a última demão. Confiança se constrói assim.</p></li>
+      </ol>
+    </section>
+
+    <!-- CONTATO -->
+    <section class="contato section" id="contato">
+      <canvas id="fluid2" class="contato__canvas" aria-hidden="true"></canvas>
+      <div class="contato__inner">
+        <div>
+          <p class="eyebrow eyebrow--light reveal">06 · Visite o ateliê</p>
+          <h2 class="reveal">Vamos dar cor<br>ao que é <em>seu</em>?</h2>
+          <p class="contato__lead reveal">Dúvidas, sugestões e orçamentos: passe em uma de nossas lojas, mande uma mensagem ou ligue. Teremos um café e uma cartela de cores esperando por você.</p>
+          <div class="hero__actions reveal">
+            <a class="btn btn--solid btn--light" id="whatsBtn" href="tel:+551149754215" target="_blank" rel="noopener">Conversar agora</a>
+            <a class="btn btn--link btn--link-light" href="https://www.instagram.com/tintasrc_oficial" target="_blank" rel="noopener">@tintasrc_oficial <span aria-hidden="true">↗</span></a>
+          </div>
+        </div>
+        <div class="info reveal">
+          <article class="store">
+            <span class="store__tag">Loja Zona Leste · SP</span>
+            <address>Av. Ragueb Chohfi, 3205<br>Parque Boa Esperança · São Paulo</address>
+            <p><a href="tel:+551127311070">(11) 2731-1070</a> · <a href="tel:+551127353514">(11) 2735-3514</a></p>
+            <a class="store__map" href="https://www.google.com/maps/search/?api=1&amp;query=Tintas+RC+Av.+Ragueb+Chohfi+3205+S%C3%A3o+Paulo" target="_blank" rel="noopener">Ver no mapa ↗</a>
+          </article>
+          <article class="store">
+            <span class="store__tag">Loja ABC · Santo André</span>
+            <address>Av. das Nações, 470<br>Parque Capuava · Santo André</address>
+            <p><a href="tel:+551149754215">(11) 4975-4215</a></p>
+            <a class="store__map" href="https://www.google.com/maps/search/?api=1&amp;query=Tintas+RC+Av.+das+Na%C3%A7%C3%B5es+470+Santo+Andr%C3%A9" target="_blank" rel="noopener">Ver no mapa ↗</a>
+          </article>
+          <dl class="hours">
+            <div><dt>Horários</dt><dd>Seg a Sex · 8h às 18h<br>Sábado · 8h às 13h30</dd></div>
+            <div><dt>E-mail</dt><dd><a href="mailto:tintasrc@tintasrc.com.br">tintasrc@tintasrc.com.br</a></dd></div>
+          </dl>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <img src="assets/img/logo-light.png" alt="Tintas RC" width="120" height="82" loading="lazy">
+    <p>© <span id="year"></span> Tintas RC · Loja de Tintas · Zona Leste &amp; ABC</p>
+    <a href="#topo" class="footer__top">voltar ao topo ↑</a>
+  </footer>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
